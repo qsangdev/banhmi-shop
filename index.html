@@ -8,8 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&family=Poppins:wght@200;300&family=Roboto:wght@100&display=swap" rel="stylesheet">    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&family=Poppins:wght@200;300&family=Roboto:wght@100&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Bánh mì MindX</title>
 </head>
 <body> 
     <header>
@@ -22,9 +23,12 @@
         
         <div class = "taskbar"> 
             <ul>
-            <li><button id="buy" onClick="document.getElementById('menu').scrollIntoView();">Mua ngay</button></li>
-            <li><button id="search" onClick="document.getElementById('menu').scrollIntoView();"><i class="fa-solid fa-magnifying-glass"></i></button></li>
-            <li><a id = "loginBtn"  href="./login/login.html">Đăng nhập</a></li>
+                <li><a id="home" href="./index.html">Trang Chủ</a></li>
+                <li><a id="membership"   href="./member.html">Khách hàng thân thiết</a></li>
+                <li><a id="sale" href="./sale.html">Khuyến mãi</a></li>
+                <li><button id="buy" onClick="document.getElementById('menu').scrollIntoView();">Mua ngay</button></li>
+                <li><button id="search" onClick="document.getElementById('menu').scrollIntoView();"><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                <li><a id = "loginBtn"  href="./login/login.html">Đăng nhập</a></li>
                 <div class="cart">
                 <a href="./cart.html" target="_blank">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -37,33 +41,49 @@
         </div>
 
     </header>
-    <div class = "content">
-        <div class = "introslide">
-            <div class = "slideshow">
-                <img src = "https://i.ytimg.com/vi/emuw7aCP5E4/maxresdefault.jpg">
-            </div>
-            <div class = "slideshow">
-                <img src = "https://cdn.brvn.vn/topics/1280px/2020/24310_24310_F&B-VuaBanhMi_Ava_2.jpg">
-            </div>
-            <div class = "slideshow">
-                <img src = "https://banhmipho.vn/wp-content/uploads/2020/09/khuyen-mai-banner.jpg">
-            </div>
-            <div class = "slideshow">
-                <img src = "https://cdn.24h.com.vn/upload/3-2022/images/2022-07-14/Banh-mi-diem-nhan-doc-dao-cua-am-thuc-duong-pho-Viet-Nam-2-1657769244-963-width800height450.jpg">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        
-        <div class = "option">
-            
-        
-        </div>
-        
-        
-    </div>
-
     
+    <!--image slider start-->
+    <div class="slider">
+        <div class="slides">
+          <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons end-->
+          <!--slide images start-->
+          <div class="slide first">
+            <img src="./image/banner-1.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="./image/banner-2.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="./image/banner-3.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="./image/banner-4.png" alt="">
+          </div>
+          <!--slide images end-->
+          <!--automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+      </div>
+      <!--image slider end-->
 
     <div class="menu" id="menu">
         <div class="title">
@@ -81,29 +101,64 @@
 
     </div>
 
-    <div class = "contact">
-        <h2>Contact Us</h2>
-        <div>Address: Tầng 6 - Số 22C Thành Công - quận Ba Đình - Hà Nội - Vietnam</div>
-        <div>Phone: 0969699966</div>
-    </div>
-
-    <div class = "feedback">
-        <div class = "title">Feedback</div>
-        <form>
-            <div class = "fb">
-                <label for="name">Name</label>
-                <input id = "name" type="text" placeholder="Enter name">    
+    <footer class="main-footer">
+        <div class="contact">
+          <h2 class="contact-title">Phản hồi</h2>
+          <form action="type">
+            <input type="text" placeholder="Họ tên" class="contact-name" />
+            <input type="text" placeholder="Email" class="contact-email" />
+            <input
+              type="text"
+              placeholder="Vấn đề"
+              class="contact-problem"
+            />
+            <input
+              type="text"
+              placeholder="Nội dung"
+              class="contact-message"
+            />
+            <button type="submit" class="contact-send">Gửi</button>
+          </form>
+        </div>
+        <div class="about">
+          <h2>Về Chúng Tôi</h2>
+          <a href="#" class="ab-banhmimindx">Bánh mì MindX</a>
+          <a href="#" class="ab-support">Hỗ trợ</a>
+          <a href="#" class="ab-shipment">Giao hàng</a>
+          <a href="#" class="ab-payment">Thanh toán</a>
+          <a href="#" class="ab-vouchers">Vouchers</a>
+          <a href="#" class="ab-help">Câu hỏi</a>
+        </div>
+        <div class="about-banhmimindx">
+            <h2>Liên hệ</h2>
+          <div class="about-us">
+            <div class="clf-location">
+              <i class="fa-solid fa-location-dot"></i>   22C Thanh Cong, Ba
+              Dinh, HN
             </div>
-            <div class = "fb">
-                <label for="phone">Phone No</label>
-                <input id = "phone" type="number" placeholder="Enter phone no">    
+            <div class="clf-number">
+              <i class="fa-solid fa-phone"></i></i>   0969 699 966
             </div>
-            <div class = "fb">
-                <label for="content">Feedback</label>
-                <textarea id = "content"></textarea>     
+            <div class="clf-email">
+              <i class="fa-solid fa-envelope"></i>   banhmimindx@gmail.com
             </div>
-        </form>
-    </div>
+            <div class="clf-donate">
+              <i class="fa-solid fa-circle-dollar-to-slot"></i>   030064297208
+              Sacombank
+            </div>
+          </div>
+          <div class="clf-socnet">
+            <ul>
+              <li class="facebook">
+                <i class="fa-brands fa-facebook-square"></i>
+              </li>
+              <li class="ig"><i class="fa-brands fa-instagram"></i></li>
+              <li class="twitter"><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <h4 class="team2">@ Copyright 2022 - Project by Team 2 - All Rights Reserved</h4>  
     <script src="./data.js"></script>
     <script src = ./app.js></script>
     <script src="./search.js"></script>
