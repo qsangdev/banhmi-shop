@@ -26,9 +26,9 @@ let generateCartItems = () => {
                 <div class="title-price-x"> 
                     <h4 class="title-price">
                     <p>${search.name}</p>
-                    <p class="cart-item-price">${search.price}</p>
+                    <p class="cart-item-price">${search.price} VNĐ</p>
                     </h4>
-                    <p onclick="removeItem(${id})">X</p>
+                    <p id="delete" onclick="removeItem(${id})">X</p>
                 </div>
 
                 <div class="cart-buttons"> 
@@ -37,7 +37,7 @@ let generateCartItems = () => {
                     <input id=quant-${id} class="quantity" type="number" min="0"  value="${item}" onchange="updateFunc(${id},this.value)"/>
                     </div>
                 </div>
-                <h3>${item * search.price}</h3>
+                <h3>${item * search.price} VNĐ</h3>
                 </div>
             </div>
             `;
@@ -89,7 +89,7 @@ let totalAmount = () => {
       })
       .reduce((x, y) => x + y, 0);
     label.innerHTML = `
-        <h2>Tổng thanh toán: ${amount} VND</h2>
+        <h2>Tổng thanh toán: ${amount} VNĐ</h2>
         <a href = "index.html#menu">
             <button class="homeBtn"> Mua thêm </button>
         </a>
