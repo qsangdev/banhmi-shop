@@ -28,10 +28,11 @@ function signup(e) {
     localStorage.setItem("userData", JSON.stringify(userData));
     document.getElementById("username").focus();
     alert("Đăng kí thành công!");
+    window.location.href = "/demo/login/login.html";
   } else {
     alert("Tài khoản đã tồn tại!");
   }
-  e.preventDefault();
+  event.preventDefault();
 }
 
 // LOG IN
@@ -57,9 +58,9 @@ function login(e) {
     alert("Thông tin sai hoặc tài khoản chưa được đăng kí.");
   } else {
     alert("Đăng nhập thành công!");
-    window.location = "/demo/index.html";
+    window.location.href = "/demo/index.html";
   }
-  e.preventDefault();
+  event.preventDefault();
 }
 
 // function signup(e) {
