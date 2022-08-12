@@ -3,8 +3,9 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("https://deliciousvietnam.net/wp-content/uploads/BanhMi_NgonVietnam01-1200x750.jpg") ;
+  background-image: url("/demo/image/banh-mi-bo-sot-tieu-den.jpg");
   font-family: "Roboto", sans-serif;
+  background-size: 100%;
 }
 :root {
   --bg--color: #006778;
@@ -24,7 +25,7 @@ body {
   margin-bottom: 10px;
   height: 45px;
   width: 100%;
-  border: 1px solid #0093ab;
+  border: 1px solid pink;
   outline: none;
   border-radius: 10px;
 }
@@ -33,7 +34,7 @@ body {
   border: none;
   outline: none;
   border-radius: 5px;
-  background: var(--bg--color);
+  background: pink;
   transition: all 0.2s linear;
 }
 .btn:hover {
@@ -50,4 +51,8 @@ body {
   transform: translateX(120px);
   margin-bottom: 20px;
   color: var(--bg--color);
+}
+
+#btnSignup {
+  cursor: pointer;
 }

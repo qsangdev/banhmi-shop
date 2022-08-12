@@ -93,7 +93,7 @@ let totalAmount = () => {
         <a href = "index.html#menu">
             <button class="homeBtn"> Mua thêm </button>
         </a>
-        <button class="checkout">Checkout</button>
+        <button onclick="checkout()" class="checkout">Thanh toán</button>
         <button onclick="clearCart()" class="removeAll">Xóa hết</button>
         `;
   } else return;
@@ -107,3 +107,27 @@ let clearCart = () => {
   generateCartItems();
   localStorage.setItem("data", JSON.stringify(basket));
 };
+
+// fucntion thanh toan
+
+function checkout() {
+  let person = prompt("Nhập tên của bạn:", "");
+  if (person == null || person == "") {
+    alert("Vui lòng nhập tên.");
+    return;
+  }
+  let location = prompt("Nhập địa chỉ:", "");
+  if (location == null || location == "") {
+    alert("Vui lòng nhập địa chỉ. ");
+    return;
+  }
+  let number = prompt("Nhập số điện thoại:", "");
+  if (number == null || number == "") {
+    alert("Vui lòng nhập số điện thoại.");
+    return;
+  }
+  {
+    alert("Thanh toán thành công!");
+    clearCart();
+  }
+}

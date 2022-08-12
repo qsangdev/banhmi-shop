@@ -3,14 +3,27 @@ function signup(e) {
   var username = document.getElementById("username").value;
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
-  var user = {
-    username: username,
-    email: email,
-    password: password,
-  };
-  var json = JSON.stringify(user);
-  localStorage.setItem(username, json);
-  alert("dang ky thanh cong");
+  var passwordcomfirm = document.getElementById("password-comfirm").value;
+
+  if (username == "" || email == "" || password == "") {
+    alert("Vui lòng nhập tên đăng kí và mật khẩu.");
+  } else if (
+    username == "" ||
+    email == "" ||
+    password == "" ||
+    password !== passwordcomfirm
+  ) {
+    alert("Vui lòng nhập đúng mật khẩu xác nhận!");
+  } else {
+    var user = {
+      username: username,
+      email: email,
+      password: password,
+    };
+    var json = JSON.stringify(user);
+    localStorage.setItem(username, json);
+    alert("Đăng kí thành công!");
+  }
 }
 function login(e) {
   event.preventDefault();
@@ -19,16 +32,19 @@ function login(e) {
   var password = document.getElementById("password").value;
   var user = localStorage.getItem(username);
   var data = JSON.parse(user);
-  if (!user) {
-    alert("vui long nhap username password");
+
+  // console.log();
+
+  if (username == "" || email == "" || password == "") {
+    alert("Vui lòng nhập tên đăng nhập và mật khẩu.");
   } else if (
-    username == data.username &&
-    email == data.email &&
+    username == data.username ||
+    email == data.email ||
     password == data.password
   ) {
-    alert("dang nhap thanh cong");
-    window.location.href = "todolist.html";
+    alert("Đăng nhập thành công!");
+    window.location.href = "/demo/index.html";
   } else {
-    alert("dang nhap that bai");
+    alert("Thông tin sai hoặc tài khoản chưa được đăng kí.");
   }
 }
