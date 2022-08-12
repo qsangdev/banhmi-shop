@@ -306,9 +306,8 @@ body {
 .menu_items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px;
+  grid-gap: 20px;
   padding-top: 15px;
-  margin: 0 15px;
   margin: 15px;
 }
 
